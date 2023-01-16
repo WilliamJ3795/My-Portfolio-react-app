@@ -6,65 +6,49 @@ import React from 'react';
 function NavTabs({ currentPage, handlePageChange }) {
   return (
 <header className="bg-gray-800 md:sticky top-0 z-10">
-  <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-  <a className="title-font font-medium text-white mb-4 md:mb-0">
-          <a href="#about" className="ml-3 text-xl">
-            William James
-          </a>
-        </a>
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a
-          href="#about"
-          onClick={() => handlePageChange('About')}
+ <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+  <a className="title-font font-medium text-white mb-4 md:mb-0 ml-3 text-xl">
+          <a href="#about"  onClick={() => handlePageChange('About')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
           // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
-        >
-          About
+           className = {currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
+            William James
+            </a>
         </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#projects"
+    <nav className="nav nav-tabs md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+        <a href="#projects" className="mr-5 hover:text-white"
           onClick={() => handlePageChange('Projects')}
           // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
+         {...currentPage === 'Projects' ? 'nav-link active' : 'nav-link'} 
         >
           Projects
         </a>
-      </li>
-      <li className="nav-item">
         <a
-          href="#skills"
+          href="#skills" className="mr-5 hover:text-white" {...currentPage === 'Skills' ? 'nav-link active' : 'nav-link'}
           onClick={() => handlePageChange('Skills')}
           // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Skills' ? 'nav-link active' : 'nav-link'}
+          // className={currentPage === 'Skills' ? 'nav-link active' : 'nav-link'}
         >
           Skills
         </a>
-      </li>
-      <li className="nav-item">
         <a
-          href="#testimonials"
+          href="#testimonials" className="mr-5 hover:text-white"
           onClick={() => handlePageChange('Testimonials')}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Testimonials' ? 'nav-link active' : 'nav-link'}
+        {...currentPage === 'Testimonials' ? 'nav-link active' : 'nav-link'}
         >
           Testimonials
         </a>
-      </li>
-      <li className="nav-item">
         <a
-          href="#contact"
+          href="#contact" className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 mr-5 hover:text-white"
           onClick={() => handlePageChange('Contact')}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+          {...currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
-          Contact
+          Contact Me
+          <ArrowRightIcon className="w-4 h-4 ml-1" />
         </a>
-      </li>
-    </ul>
+      </nav>
       </div>
       </header>
   );
