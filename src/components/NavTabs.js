@@ -27,7 +27,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         >
           Skills
         </a>
-        <a
+        {/* <a
           href="#testimonials" className="mr-5 hover:text-white"
           onClick={() => handlePageChange('Testimonials')}
         {...currentPage === 'Testimonials' ? 'nav-link active' : 'nav-link'}
@@ -40,7 +40,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         {...currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact Me <ArrowRightIcon className="w-4 h-4 ml-2" />
-        </a>
+        </a> */}
       </nav>
       </div>
       </header>
