@@ -43,16 +43,22 @@ export default function About() {
       </div>
     </div>
     
-    <footer className="container mx-auto flex px-8 py-8 md:flex-row flex-col items-center">
-      <div className='px-8 py-8 '>
+    {/* <footer className="bg-yellow-700 md:sticky top-0 z-10 "> */}
+    <footer className=" px-8 py-8 bg-yellow-400 md:sticky top-0 z-10 ">
+      <div className='flex m-auto w-28
+       justify-between'>
+        
        <a href='https://www.linkedin.com/in/william-james-b25633101/'>
-          <BsLinkedin className="object-cover h-6 w-6"/>
+          <BsLinkedin className="object-cover h-6 w-6 hover:text-white"/>
        </a>
-      </div>
+       {/* </div>
 
+       <div className='px-8 py-8 w-5 display: grid; grid-gap: 1rem; '> */}
+       <a href='https://github.com/WilliamJ3795'>
+       <BsGithub className="object-cover h-6 w-6 mr-5 hover:text-white"/>
+       </a>
+       </div>
     
-      <div className='px-8 py-8 '/> 
-      <BsGithub className="object-cover h-6 w-6"/>
 
        </footer>
       
