@@ -1,5 +1,7 @@
 import React from 'react';
 import { BsFillLaptopFill } from "react-icons/bs";
+import {BsLinkedin} from "react-icons/bs";
+import {BsGithub} from "react-icons/bs";
 
 export default function About() {
   return (
@@ -40,6 +42,21 @@ export default function About() {
         />
       </div>
     </div>
-  </section>
+    
+    <footer className="container mx-auto flex px-8 py-8 md:flex-row flex-col items-center">
+      <div className='px-8 py-8 '>
+       <a href='https://www.linkedin.com/in/william-james-b25633101/'>
+          <BsLinkedin className="object-cover h-6 w-6"/>
+       </a>
+      </div>
+
+    
+      <div className='px-8 py-8 '/> 
+      <BsGithub className="object-cover h-6 w-6"/>
+
+       </footer>
+      
+      </section>
+
 );
 }
